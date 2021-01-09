@@ -12,12 +12,6 @@ def bfs(N):
                 stack.append(ind)
     return cnt - 1
 
-
-
-
-
-
-
 N = int(input())
 M = int(input())
 graph = [[] for _ in range(N+1)]
