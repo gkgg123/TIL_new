@@ -1,8 +1,7 @@
 def check(cnt,total,di):
-    global result,ccnt
+    global result
     if cnt == arr[0]:
         temp = 1
-        ccnt += 1
         for k in di:
             temp *= arr[dire.index(k)+1]/100
         result += temp
@@ -23,7 +22,5 @@ dy = [1,-1,0,0]
 dire = ['E','W','S','N']
 arr = list(map(int,input().split()))
 result = 0
-ccnt = 0
 check(0,[(0,0)],[])
-print(result)
 print(ccnt)
