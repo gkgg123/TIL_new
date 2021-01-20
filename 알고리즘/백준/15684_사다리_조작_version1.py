@@ -17,10 +17,9 @@ def check():
 
 def dfs(row_index,col_index,cnt,limit):
     global N,H,result
-    if cnt > limit:
-        return
-    if check():
-        result = min(cnt,result)
+    if cnt == limit:
+        if check():
+            result = cnt
         return
     for k in range(row_index,H):
         if k == row_index:
