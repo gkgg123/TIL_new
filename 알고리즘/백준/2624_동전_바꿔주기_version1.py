@@ -18,4 +18,6 @@ for coin_val,coin_cnt in money:
         for current_cnt in range(1,coin_cnt+1):
             if current_money - current_cnt*coin_val >= 0:
                 dp[current_money] += dp[current_money-current_cnt*coin_val]
+            else:
+                break
 print(dp[T])
