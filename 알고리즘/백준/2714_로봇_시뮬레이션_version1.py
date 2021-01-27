@@ -17,6 +17,8 @@ def display_crash(flag,*numbers):
         return f'Robot {numbers[0]} crashes into the wall'
     else:
         return f'Robot {numbers[0]} crashes into robot {numbers[1]}'
+
+
 A,B = map(int,input().split())
 N,M = map(int,input().split())
 robots = {}
@@ -37,10 +39,8 @@ result = 'OK'
 go_robots = [(1,0),(0,-1),(-1,0),(0,1)]
 
 
-while command_list:
-    command_robot,command,repeat = command_list.pop(0)
+for command_robot,command,repeat in command_list:
     cu_X, cu_Y,cu_dire = robots[command_robot]
-    del robots[command_robot]
     del robot_place[(cu_X,cu_Y)]
     for _ in range(repeat):
         if command == 'F':
