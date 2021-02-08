@@ -1,10 +1,7 @@
 import sys
 
-sys.stdin = open('판다2.txt','r')
 
 def dfs(x,y):
-    global call
-    call += 1
     if dp[x][y] != -1:
         return dp[x][y]
     else:
@@ -29,7 +26,6 @@ dx = [-1,1,0,0]
 dy = [0,0,-1,1]
 bamboo = [list(map(int,input().split())) for _ in range(N)]
 dp = [[-1]*N for _ in range(N)]
-call = 0
 result = - 1
 for x in range(N):
     for y in range(N):
@@ -37,4 +33,3 @@ for x in range(N):
             dfs(x,y)
 
 print(max(map(max,dp)))
-print(call)

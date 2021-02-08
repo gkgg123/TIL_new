@@ -1,8 +1,4 @@
 # 1937 욕심쟁이 판다
-import sys
-
-sys.stdin = open('판다.txt','r')
-
 def dfs(x,y):
     global N
     stack = [(x,y,0)]
@@ -39,6 +35,4 @@ for x in range(N):
     for y in range(N):
         if dp[x][y] == -1:
             dfs(x,y)
-        print(dp)
-print(dp)
 print(max(map(max,dp)))
