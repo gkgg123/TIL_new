@@ -55,8 +55,6 @@ while True:
     if snake_times == next_time:
         snake_direction = (snake_direction + commands[ind][1])%4
         ind += 1
-        print(snake_direction)
         if ind == command_cnt:
             flag = False
-    print(snakes)
 print(snake_times)
