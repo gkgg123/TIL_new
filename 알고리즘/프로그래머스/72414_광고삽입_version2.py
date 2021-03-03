@@ -29,3 +29,5 @@ def solution(play_time, adv_time, logs):
             max_start_time = ind
     answer = changeString(max_start_time)
     return answer
+
+solution("99:59:59","25:00:00",	["69:59:59-89:59:59", "01:00:00-21:00:00", "79:59:59-99:59:59", "11:00:00-31:00:00"])
