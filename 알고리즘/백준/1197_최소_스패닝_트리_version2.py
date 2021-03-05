@@ -1,6 +1,6 @@
 import sys
 import heapq
-sys.stdin = open('sssss.txt','r')
+
 input = sys.stdin.readline
 V,E = map(int,input().split())
 
