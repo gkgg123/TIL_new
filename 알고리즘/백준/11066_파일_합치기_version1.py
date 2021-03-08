@@ -19,8 +19,8 @@ def divide_two(ind_X,ind_Y):
 
     
 
-
 for _ in range(T):
+
     N = int(input())
     dp = [[-1]*N for _ in range(N)]
     books = list(map(int,input().split()))
