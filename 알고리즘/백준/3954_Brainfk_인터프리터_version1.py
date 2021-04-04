@@ -72,8 +72,8 @@ for tc in range(T):
     if command_index == codesize:
         print('Terminates')
     else:
-        loop_idx = min(command_index,loop_idx)
-        while command_cnt >0:
+        while command_cnt >=0:
             command_cnt -= 1
-
+            go()
+            loop_idx = min(command_index,loop_idx)
         print(f'Loops {loop_idx-1} {bracket_couple[loop_idx-1]}')
