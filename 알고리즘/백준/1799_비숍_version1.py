@@ -1,5 +1,5 @@
 import sys
-
+sys.stdin = open('1799.in','r')
 def input():
     return sys.stdin.readline().rstrip()
 
@@ -14,6 +14,7 @@ def dfs(problem_list,start,pick_list,color):
     global result
     if len(problem_list) == start:
         result[color] = max(result[color],len(pick_list))
+        print(pick_list,color)
         return
     else:
 
