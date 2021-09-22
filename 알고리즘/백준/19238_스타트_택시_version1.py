@@ -12,8 +12,8 @@ def find_passenger(start,K):
     candidate = []
     while stack:
         x,y,fuel = stack.popleft()
-        if fuel <= 0:
-            return False
+        if fuel < 0:
+            break
         for i in range(4):
             nx = x + dx[i]
             ny = y + dy[i]
@@ -76,9 +76,6 @@ for _ in range(M):
 answer = 0
 cnt = 0
 while cnt <M:
-    if K == 0:
-        answer = -1
-        break
     passenger = find_passenger(taxi,K)
     if not passenger:
         answer = -1
@@ -89,6 +86,9 @@ while cnt <M:
         break
     taxi = [destination[0],destination[1]]
     K = destination[-1]
+    if K < 0:
+        answer = -1
+        break
     cnt += 1
 
 
