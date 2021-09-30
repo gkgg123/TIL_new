@@ -11,8 +11,7 @@ def init(x,y):
     stack = []
     x = x + dx[dire]
     y = y + dy[dire]
-    if arr[x][y]:
-        stack.append(arr[x][y])
+    stack.append(arr[x][y])
     while True:
         if cnt == number_cnt:
             cnt = 0
@@ -24,8 +23,7 @@ def init(x,y):
         nx = x + dx[dire]
         ny = y + dy[dire]
         if 0>nx or nx>=N or 0>ny or ny>=N:break
-        if arr[nx][ny]:
-            stack.append(arr[nx][ny])
+        stack.append(arr[nx][ny])
         x,y =nx,ny
         cnt += 1
     
@@ -71,6 +69,7 @@ def bomb(ball):
         stack = []
 
         for num in ball:
+            if not num:continue
             if stack:
                 if stack[-1] != num:
                     if len(stack) >= 4:
@@ -117,7 +116,6 @@ def reshape(ball):
         
 
     
-
 N,M = map(int,input().split())
 
 arr = [list(map(int,input().split())) for _ in range(N)]
@@ -131,8 +129,5 @@ for tc in range(M):
     blizzard(dire,s)
     ball = bomb(ball)
     ball = reshape(ball)
-    if max(ball)>=4:
-        assert IndexError
-        break
 answer = 1*result[1] + 2*result[2] + 3*result[3]
 print(answer)
