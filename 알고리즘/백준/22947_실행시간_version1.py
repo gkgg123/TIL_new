@@ -1,7 +1,6 @@
 import sys
 from collections import deque
 from itertools import combinations
-
 def input():
     return sys.stdin.readline().rstrip()
 
